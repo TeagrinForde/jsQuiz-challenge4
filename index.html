@@ -11,15 +11,21 @@
 
 <body>
   <header>
-    <a href="">View High Scores></a>
+    <a href="./champion.html">View High Scores</a>
     <h3 class="title">JavaScript Coder Quiz</h3>
-    <div id="timer"></div>
+    <h5 class="timer"><div id="num">90</div></h5>
+
   </header>
 
   <main>
     <div class="container">
-        \*start button centered disappear on click*\
-        <div class="questions"></div>
+        <button id="start" onclick="startTimer()">Click to START the timer!</button>
+
+        <div class="box">
+            <div class="question">
+                <div class="choices"></div>
+            </div>
+        </div>
     </div>
   </main>
 <script src="./script.js"></script>

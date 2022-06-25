@@ -1,7 +1,6 @@
 body {
     background-color: teal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        
 }
 
 header {
@@ -10,4 +9,36 @@ header {
     font-size: 20px;
     background-color: brown;
     color: white;
+    padding: 5px;
+}
+
+header a {
+    color:aqua
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+}
+
+table {
+    background-color: darkcyan;
+    text-align: center;
+}
+
+table .topRow {
+    font-weight: bolder;
+}
+
+table tr th,
+table tr td {
+    padding: 5px;
+}
+
+#start {
+    background-color: darkgreen;
+    padding: 10px;
 }
