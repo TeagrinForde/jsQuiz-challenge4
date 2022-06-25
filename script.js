@@ -12,9 +12,14 @@ function startTimer() {
       //start questions loop
     }
     if (seconds === 0) {
-        clearInterval(interval);
-        prompt("Time's up!", "Enter your initials HERE");
-        //take to champion page      
+        clearInterval(seconds);
+        var totalScore
+
+        var end = prompt("Time's up!", "Enter your initials HERE");
+        var input = document.getElementById(end); //collect input
+         //send initials to champion.html
+
+        window.open("champion.html"); //MVP page
     }
   }, 1000);
 }
