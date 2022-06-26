@@ -2,32 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Quiz</title>
-  <link rel="stylesheet" href="./reset.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <header>
     <a href="./champion.html">View High Scores</a>
     <h3 class="title">JavaScript Coder Quiz</h3>
-    <h5 class="timer"><div id="num">90</div></h5>
-
+    <h5 class="timer">
+      <div id="num">90</div>
+    </h5>
   </header>
 
   <main>
-    <div class="container">
-        <button id="start" onclick="startTimer()">Click to START the timer!</button>
+    <div class="container" id="score">
 
-        <div class="box">
-            <div class="question">
-                <div class="choices"></div>
-            </div>
-        </div>
+      <button id="start" onclick="startTimer()"><strong>Click to START the timer!</strong></button>
+
+      <div class="scoreQuestion">
+        <h1>Score : <span id='totalScore'></span></h1>
+        <h1> Question : <span id='questionNumber'></span></h1>
+      </div>
+
+
+      <div class="question">
+        <h1 id="displayQuestion"></h1>
+      </div>
+
+      <div class="responses">
+        <span>
+          <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+          <label for="option-one" class="option" id="oneLabel"></label>
+        </span>
+
+
+        <span>
+          <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+          <label for="option-two" class="option" id="twoLabel"></label>
+        </span>
+
+
+        <span>
+          <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+          <label for="option-three" class="option" id="threeLabel"></label>
+        </span>
+
+
+        <span>
+          <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+          <label for="option-four" class="option" id="fourLabel"></label>
+        </span>
+
+      </div>
+
+      <div class="nextButton">
+        <button onclick="nextQuestion()">Next Question</button>
+      </div>
+
     </div>
+
   </main>
-<script src="./script.js"></script>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
