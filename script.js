@@ -206,7 +206,7 @@ const questions = [
   }
 ]
 
-//clears start and shows next btn after clicked
+//clears start & shows next btn after clicked
 var button = document.getElementById('start');
 button.addEventListener('click', () => {
   button.style.display = 'none';
@@ -219,7 +219,7 @@ function startTimer() {
   var interval = setInterval(function () {
     seconds--;
     time.textContent = seconds;
-    if (seconds >= 0) {
+    if (seconds > 0) {
       console.log('Questions appear!')
       // nextQuestion()//start questions
     }
@@ -235,27 +235,27 @@ function startTimer() {
 }
 
 
-let shuffledQuestionsEl = []; //hold shuffled questions
+let shuffledQuestionsEl = []; //shuffled ques
+let scoreEl = 0; //tally correct answers
 let questionNumberEl = 1; //# questns opened
-let scoreEl = 0;
 let indexNumberEl = 0; //which question
 
-//shuffling questions
-// function handleQuestions() {
-//   while (seconds > 0) {
-//     const random = questions[Math.floor(Math.random() * questions.length)]
-//     if (!shuffledQuestionsEl.includes(random)) {
-//       shuffledQuestionsEl.push(random)
-//     }
-//   }
-// }
+//shuffle and display questions
+function handleQuestions() {
+  while (seconds > 0) {
+    const random = questions[Math.floor(Math.random() * questions.length)]
+    if (!shuffledQuestionsEl.includes(random)) {
+      shuffledQuestionsEl.push(random)
+    }
+  }
+}
 
 //move to the next question
 function nextQuestion(index) {
   handleQuestions()
   var currentQuestion = shuffledQuestions[index]
   document.getElementById('questionNumber').innerHTML = questionNumberEl
-  document.getElementById('totalScore').innerHTML = scoreEl
+  document.getElementById('playerScore').innerHTML = scoreEl
   document.getElementById("displayQuestion").innerHTML = currentQuestion.question;
   document.getElementById("oneLabel").innerHTML = currentQuestion.optionA;
   document.getElementById("twoLabel").innerHTML = currentQuestion.optionB;
