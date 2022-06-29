@@ -28,6 +28,8 @@ main {
     align-content: center;
     padding: 5px;
     width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 table {
@@ -51,21 +53,25 @@ table tr td {
 
 .container {
     width: 40rem;
-    height: 40rem;
+    height: 30rem;
     background-color: cyan;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-radius: 35px;
+    border-radius: 30px;
 }
 
 .scoreQuestion {
     width: 90%;
-    height: 5rem;
+    height: 3rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex;
+}
+
+.scoreQuestion h1 {
+    font-size: 1.1rem;
 }
 
 .question {
@@ -74,13 +80,12 @@ table tr td {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .question h1 {
     font-size: 1.1rem;
     text-align: center;
-    padding: 5px;
+    padding: 2px;
 }
 
 .responses {
@@ -96,7 +101,7 @@ table tr td {
     width: 40%;
     height: 3rem;
     border: 2px solid darkblue;
-    border-radius: 35px;
+    border-radius: 15px;
     overflow-wrap: normal;
 }
 
@@ -136,10 +141,46 @@ input [type=radio]:checked ~ .option {
 .nextButton button {
     width: 10rem;
     height: 3rem;
-    border-radius: 14px;
+    border-radius: 10px;
     font-weight: 500;
     border: 2px solid darkblue;
 }
+
 .nextButton button:hover {
     background-color: magenta;
+}
+
+@media(min-width : 300px) and (max-width : 350px){
+    .container{
+        width: 90%;
+        height: 80vh;
+     }
+     .scoreQuestion h1{
+        font-size: 0.8rem;
+     }
+ 
+     .questionContainer{
+        height: 6rem;
+     }
+     .questionContainer h1{
+       font-size: 0.9rem;
+    }
+}
+
+@media(min-width : 350px) and (max-width : 700px){
+   .container{
+       width: 90%;
+       height: 80vh;
+    }
+    .scoreQuestion h1{
+        font-size: 1rem;
+    }
+
+    .questionContainer{
+        height: 8rem;
+    }
+
+    .questionContainer h1{
+        font-size: 0.9rem;
+     }
 }

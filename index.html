@@ -9,52 +9,52 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body onload="nextQuestion(0)">
   <header>
     <a href="./champion.html">View High Scores</a>
     <h3 class="title">JavaScript Coder Quiz</h3>
     <h5 class="timer">
-      <div id="num">90</div>
+      <div>90</div>
     </h5>
   </header>
 
   <main>
-    <div class="container" id="score">
+    <div class="container">
 
       <button id="start"><strong>Click to START the timer!</strong></button>
 
       <div class="scoreQuestion">
-        <h1>Score : <span id='totalScore'></span></h1>
+        <h1>Score : <span id='playerScore'></span></h1>
         <h1> Question : <span id='questionNumber'></span></h1>
       </div>
 
 
-      <div class="question">
+      <div class="questionContainer">
         <h1 id="displayQuestion"></h1>
       </div>
 
       <div class="responses">
         <span>
-          <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-          <label for="option-one" class="option" id="oneLabel"></label>
+          <input type="radio" id="option1" name="option" class="radio" value="optionA" />
+          <label for="option1" class="option" id="oneLabel"></label>
         </span>
 
 
         <span>
-          <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
-          <label for="option-two" class="option" id="twoLabel"></label>
+          <input type="radio" id="option2" name="option" class="radio" value="optionB" />
+          <label for="option2" class="option" id="twoLabel"></label>
         </span>
 
 
         <span>
-          <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
-          <label for="option-three" class="option" id="threeLabel"></label>
+          <input type="radio" id="option3" name="option" class="radio" value="optionC" />
+          <label for="option3" class="option" id="threeLabel"></label>
         </span>
 
 
         <span>
-          <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
-          <label for="option-four" class="option" id="fourLabel"></label>
+          <input type="radio" id="option4" name="option" class="radio" value="optionD" />
+          <label for="option4" class="option" id="fourLabel"></label>
         </span>
       </div>
 
