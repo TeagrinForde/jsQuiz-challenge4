@@ -6,203 +6,88 @@ var seconds = 90;
 const questions = [
   {
     question: "Which of the following represents a built-in data type for storing key-value pairs?",
-    optionA: "array",
-    optionB: "string",
-    optionC: "number",
-    optionD: "object",
-    correctOption: "optionD"
-  },
-  {
-    question: "Which of the following is false, regarding function declarations?",
-    optionA: "Create named functions",
-    optionB: "Parameters are within []",
-    optionC: "The body is within {}",
-    optionD: "Parameters are optional",
-    correctOption: "optionB"
-  },
-  {
-    question: "A loop is used for what purpose?",
-    optionA: "To perform different sets of instructions based on some condition",
-    optionB: "Used to execute a set of instructions exactly once",
-    optionC: "Used to repeat a set of instructions forever",
-    optionD: "To repeat a set of instructions until a stopping condition is met.",
-    correctOption: "optionD"
-  },
-  {
-    question: "Which option represents a single line comment in JavaScript?",
-    optionA: "# this is a single line comment",
-    optionB: "/*this is a single line ccomment",
-    optionC: "//This is a single line comment",
-    optionD: "<!--this is a single line comment-->",
-    correctOption: "optionC"
+    answers: ['a:array', 'b:string', 'c:number', 'd:object'],
+    correctOption: "d: object"
   },
   {
     question: "Which function returns the largest integer?",
-    optionA: "Math.random()",
-    optionB: "Math.max()",
-    optionC: "Number.max()",
-    optionD: "Math.floor()",
-    correctOption: "optionD"
+    answers: ['a:Math.random()','b:Math.max()', 'c:Number.max()', 'd:Math.floor()'],
+    correctOption: "d:Math.floor()"
   },
   {
     question: "Which of the following words does not belong?",
-    optionA: "conditional statement",
-    optionB: "loop",
-    optionC: "iterate",
-    optionD: "stopping condition",
-    correctOption: "optionA"
+    answers: ['a:conditional statement', 'b:loop', 'c:iterate', 'd:stopping condition'],
+    correctOption: 'a:conditional statement'
   },
   {
     question: "[1, 2, 3, 4] represents a(n):",
-    optionA: "string",
-    optionB: "function",
-    optionC: "array",
-    optionD: "list",
-    correctOption: "optionC"
+    answers: ["a:string", "b:function", "c:array", "d:list"],
+    correctOption: "c:array"
   },
   {
     question: "Which number description is FALSE?",
-    optionA: "includes variables",
-    optionB: "primitive data type",
-    optionC: "includes integers",
-    optionD: "includes floating point numbers",
-    correctOption: "optionA"
+    answers: ["a:includes variables", "b:primitive data type", "c:includes integers", "d:includes floating point numbers"],
+    correctOption: "a:includes variables"
   },
   {
     question: "Where should the JavaScript link be located in the HTML file?",
-    optionA: "bottom of the head",
-    optionB: "bottom of the header",
-    optionC: "top of the body",
-    optionD: "bottom of the body",
-    correctOption: "optionD"
-  },
-  {
-    question: `"You Can't see me" is a popular saying by`,
-    optionA: "Eminem",
-    optionB: "Bill Gates",
-    optionC: "Chris Brown",
-    optionD: "John Cena",
-    correctOption: "optionD"
+    answers: ["a:bottom of head", "b:bottom of header", "c:top of body", "d:bottom of body"],
+    correctOption: "d:bottom of body"
   },
   {
     question: "Which of the following symbols represents the word 'AND' for conditional statements?",
-    optionA: "==",
-    optionB: "===",
-    optionC: "&&",
-    optionD: "||",
-    correctOption: "optionC"
+    answers: ["a:==", "b:===", "c:&&", "d:||"],
+    correctOption: "c:&&"
   },
   {
     question: "The three types of methods do not include which of the following?",
-    optionA: "Parameter Methods",
-    optionB: "String Methods",
-    optionC: "Array Methods",
-    optionD: "Number Methods",
-    correctOption: "optionA"
+    answers: ["a:Parameter Methods", "b:String Methods", "c:Array Methods", "d:Number Methods"],
+    correctOption: "a:Parameter Methods"
   },
   {
     question: "Which of the following is NOT a type of scope?",
-    optionA: "Global",
-    optionB: "Folder",
-    optionC: "Code block",
-    optionD: "Function",
-    correctOption: "optionB"
+    answers: ["a:Global", "b:Folder", "c:Code block", "d:Function"],
+    correctOption: "b:Folder"
   },
   {
     question: "What do we call a primitive JavaScript value that represents lack of defined value?",
-    optionA: "Null",
-    optionB: "Empty",
-    optionC: "0",
-    optionD: "Undefined",
-    correctOption: "optionD"
+    answers: ["a:Null", "b:Empty", "c:0", "d:Undefined"],
+    correctOption: "d:Undefined"
   },
   {
     question: "A JavaScript object literal is enclosed in _______?",
-    optionA: "{}",
-    optionB: "[]",
-    optionC: "()",
-    optionD: "' '",
-    correctOption: "optionA"
-  },
-  {
-    question: "Which of the following is FALSE, concerning the logical NOT operator?",
-    optionA: "The symbol is !",
-    optionB: "It inverts boolean values",
-    optionC: "Shows you are excited about coding.",
-    optionD: "Inverts the truthiness of non-boolean values",
-    correctOption: "optionC"
-  },
-  {
-    question: "Which is true regarding anonymous functions?",
-    optionA: "They can be defined using the function keyword",
-    optionB: "They have a name property",
-    optionC: "They call a function",
-    optionD: "They happen randomly",
-    correctOption: "optionA"
+    answers: ["a:{}", "b:[]", "c:()", "d:' '"],
+    correctOption: "a:{}"
   },
   {
     question: "Which method removes the last element from an array and returns that element?",
-    optionA: ".delete()",
-    optionB: ".remove()",
-    optionC: ".pop()",
-    optionD: ".push()",
-    correctOption: "optionC"
+    answers: ["a:.delete()", "b:.remove()", "c:.pop()", "d:.push()"],
+    correctOption: "c:.pop()"
   },
   {
     question: "Which of the following represents a method's calling object?",
-    optionA: "img",
-    optionB: "href",
-    optionC: "let",
-    optionD: "this",
-    correctOption: "optionD"
+    answers: ["a:img", "b:href", "c:let", "d:this"],
+    correctOption: "d:this"
   },
   {
     question: "Which line of code displays the correct use of the Null data type?",
-    optionA: "let weight = null;",
-    optionB: "let height = 9;",
-    optionC: "let area = 40;",
-    optionD: "let volume = 14;",
-    correctOption: "optionA"
+    answers: ["a:let weight = null", "b:let height = 9", "c:let area = 40", "d:let volume = 14"],
+    correctOption: "a:let weight = null"
   },
   {
     question: "Select the correct syntax to call a run() method of JavaScript object program with the argument 'init'.",
-    optionA: "program.run",
-    optionB: "program.run()",
-    optionC: "run('init')",
-    optionD: "program.run('init')",
-    correctOption: "optionD"
-  },
-  {
-    question: "How would you round 9.99 down to an integer?",
-    optionA: "Math.roundDown(9.99);",
-    optionB: "Math.floor(9.99);",
-    optionC: "Math(9.99.floor);",
-    optionD: "floor(9.99);",
-    correctOption: "optionB"
+    answers: ["a:program.run", "b:program.run()", "c:run('init')", "d:program.run('init')"],
+    correctOption: "d:program.run('init')"
   },
   {
     question: "Which of the following cannot be reassigned?",
-    optionA: "var",
-    optionB: "const",
-    optionC: "let",
-    optionD: "function",
-    correctOption: "optionB"
-  },
-  {
-    question: "Where does a call-back function go?",
-    optionA: "Inside of the function",
-    optionB: "Inside of the parameters",
-    optionC: "Outside of the function",
-    optionD: "Inside of a loop",
-    correctOption: "optionC"
+    optionA: ["a:var", "b:const", "c:let", "d:function"],
+    correctOption: "b:const"
   },
   {
     question: "Which of the following is NOT a primitive type of data?",
-    optionA: "null",
-    optionB: "strings",
-    optionC: "objects",
-    optionD: "boolean",
-    correctOption: "optionC"
+    optionA: ["a:null", "b:strings", "c:objects", "d:boolean"],
+    correctOption: "c:objects"
   }
 ]
 
@@ -234,88 +119,3 @@ function startTimer() {
   }, 1000);
 }
 
-
-let shuffledQuestionsEl = []; //shuffled ques
-let scoreEl = 0; //tally correct answers
-let questionNumberEl = 1; //# questns opened
-let indexNumberEl = 0; //which question
-
-//shuffle and display questions
-function handleQuestions() {
-  while (seconds > 0) {
-    const random = questions[Math.floor(Math.random() * questions.length)]
-    if (!shuffledQuestionsEl.includes(random)) {
-      shuffledQuestionsEl.push(random)
-    }
-  }
-}
-
-//move to the next question
-function nextQuestion(index) {
-  handleQuestions()
-  var currentQuestion = shuffledQuestions[index]
-  document.getElementById('questionNumber').innerHTML = questionNumberEl
-  document.getElementById('playerScore').innerHTML = scoreEl
-  document.getElementById("displayQuestion").innerHTML = currentQuestion.question;
-  document.getElementById("oneLabel").innerHTML = currentQuestion.optionA;
-  document.getElementById("twoLabel").innerHTML = currentQuestion.optionB;
-  document.getElementById("threeLabel").innerHTML = currentQuestion.optionC;
-  document.getElementById("fourLabel").innerHTML = currentQuestion.optionD;
-}
-
-// //check answer function
-// function checkForAnswer() {
-//   const currentQuestion = shuffledQuestions[indexNumber] //gets current Question
-//   const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
-//   const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-//   let correctOption = null
-
-//   options.forEach((option) => {
-//     if (option.value === currentQuestionAnswer) {
-//       correctOption = option.labels[0].id //gathers answer info
-//     }
-//   })
-
-//   //answer must be chosen
-//   if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-//     alert('You must choose an answer!')
-//   }
-
-//   //checking if checked button matches answer
-//   options.forEach((option) => {
-//     if (option.checked === true && option.value === currentQuestionAnswer) {
-//       document.getElementById(totalScore)
-//       score++ //adding to player's score
-//       indexNumber++ //adding 1 to index so has to display next question..
-//       setTimeout(() => {
-//         questionNumber++
-//       }, 1000)
-//     }
-//     else if (option.checked && option.value !== currentQuestionAnswer) {
-//       seconds-- * 10 //takes 10 seconds from time
-//       indexNumber++
-//       setTimeout(() => {
-//         questionNumber++
-//       }, 1000)
-//     }
-//   })
-// }
-
-// function handleNextQuestions() { //moves between questions
-//   checkForAnswer()
-//   setTimeout(() => {
-//     if (seconds === 0) { //displays questions until timer runs out
-//       nextQuestion(indexNumber)
-//     }
-//     else {
-//       handleEndGame()//ends game and tallies score
-//     }
-//   }, 1000);
-// }
-
-// function handleEndGame() {
-//   const totalScore = (score * 10)
-
-//   //send total score to array, sort array, and display score
-//   //NEED display initials
-// }
