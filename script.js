@@ -106,7 +106,7 @@ function startTimer() {
     time.textContent = seconds;
     if (seconds > 0) {
       console.log('Questions appear!')
-      // nextQuestion()//start questions
+      //start questions
     }
     if (seconds === 0) {
       clearInterval(0);
