@@ -109,7 +109,7 @@ function startTimer() {
       // nextQuestion()//start questions
     }
     if (seconds === 0) {
-      clearInterval(seconds);
+      clearInterval(0);
       var end = prompt("Time's up!", "Enter your initials HERE");
       var initialsInput = document.getElementById(end); //collect input
       //send inititals and score to champion.html
