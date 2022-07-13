@@ -136,9 +136,9 @@ button.addEventListener('click', () => {
   // scoreQuiz();
 })
 
-scoreQuiz(seconds) { //last part
+// scoreQuiz(seconds) { //last part
 
-}
+// }
 
 function startTimer() {
   var interval = setInterval(function () {
