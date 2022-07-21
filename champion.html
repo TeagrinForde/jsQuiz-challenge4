@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
+<body onload="displayScores()">
   <header>
     <a href="./index.html">Back to Quiz</a>  
     <h3 class="title">JavaScript Coder Quiz Champions</h3>
@@ -18,10 +18,8 @@
 
   <main>
     <div class="container">
-        <h1 class="scoresTitle">Scores</h1>
-        <div id="finalScore"></div>
-        <h1 class="playerInitialsTitle">Player Initials</h1>
-        <div id="playerInitials"></div>
+        <h1 class="scoresTitle">TOP 10 Scores</h1>
+        <ul id="playerInitials"></ul>
         <h3>Thank you for playing!</h3>    
     </div>
   </main>

@@ -125,7 +125,6 @@ function nextQuestion() {
   setTimeout(generateQuiz, 500); //pauses to see correctness, then uses function for next question
 }
 
-
 var seconds = questions.length*15;
 //clears start & shows next btn after clicked
 var button = document.getElementById('start');
@@ -133,27 +132,26 @@ button.addEventListener('click', () => {
   button.style.display = 'none';
   startTimer();
   generateQuiz();
-  // scoreQuiz();
+  scoreQuiz();
 })
 
-// scoreQuiz(seconds) { //last part
-
-// }
+function scoreQuiz(seconds) { //last part
+  var userName = document.getElementById('playerInitials').value;
+  var score = seconds;
+  localStorage.setItem(userName, score);  
+};
 
 function startTimer() {
   var interval = setInterval(function () {
     seconds--;
     time.textContent = seconds;
     if (seconds > 0) {
-      console.log('Questions appear!')
-      //start questions
+      console.log('Questions appear!')//start questions
     }
-    if (seconds === 0) {
+    if (seconds <= 0 || questions.length[15]) { //UNSURE HERE
       clearInterval(0);
-      var end = prompt("Time's up!", "Enter your initials HERE");
+      var end = prompt("QUIZ HAS ENDED!", "Enter your initials HERE");
       var initialsInput = document.getElementById(end); //collect input
-      //send inititals and score to champion.html
-      // var sendInitials = document.querySelector
       window.open("champion.html"); //MVP page
     }
   }, 1000);
