@@ -1,7 +1,7 @@
 //countdown timer from 90sec
 var time = document.querySelector(".timer");
 
-
+var highScoreList = [];
 //Questions below
 const questions = [
   {
@@ -132,13 +132,14 @@ button.addEventListener('click', () => {
   button.style.display = 'none';
   startTimer();
   generateQuiz();
-  scoreQuiz();
 })
 
-function scoreQuiz(seconds) { //last part
-  var userName = document.getElementById('playerInitials').value;
-  var score = seconds;
-  localStorage.setItem(userName, score);  
+function scoreQuiz(initialsInput) { //last part
+  highScoreList.push({
+    initial: initialsInput,
+    score: seconds
+  }) 
+  localStorage.setItem('highScoreList', JSON.stringify(highScoreList));  
 };
 
 function startTimer() {
@@ -148,11 +149,11 @@ function startTimer() {
     if (seconds > 0) {
       console.log('Questions appear!')//start questions
     }
-    if (seconds <= 0 || questions.length[15]) { //UNSURE HERE
-      clearInterval(0);
+    if (seconds <= 0 || index >= questions.length) { 
+      clearInterval(interval);
       var end = prompt("QUIZ HAS ENDED!", "Enter your initials HERE");
-      var initialsInput = document.getElementById(end); //collect input
-      window.open("champion.html"); //MVP page
+      scoreQuiz(end);
+      location.replace("champion.html"); //MVP page
     }
   }, 1000);
 }
